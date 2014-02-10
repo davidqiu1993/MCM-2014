@@ -16,6 +16,7 @@
 # C\C++ binary files
 # =========================
 *.exe
+calc_MinSafeDistances_out.txt
 
 
 # =========================
