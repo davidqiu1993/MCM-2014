@@ -409,16 +409,39 @@ We have
 \begin{equation}
 v = v_f(1 - \frac{\rho}{\rho_j})
 \end{equation}
-In traffic jam, the distance between two adjacent car is zero, we take 2$m$ as the average car length. Therefore, the lowest
-traffic density 
-$\rho_j = \frac{1000}{2} = 500$.
-Thus, $v = 90 - 0.18 \rho$
+When $v = 70km/h$, every two adjacent cars keep the distance 140$m$. Therefore,
+the traffic density 
+$\rho_j = \frac{1000}{140} = 7.14$.
+Thus, $v = 90 - 2.8 \rho$,
+let v = 0, we have
+$\rho_j$ = 32.14,
+$Q = 90（(\rho - \dfrac{\rho ^2}{32.14})$
 
-\begin{figure}[h]
-\small
-%\centering
-\includegraphics[width = 6cm]{v-p.png}
-%\caption{}
+Without the right-most rule, the traffic density
+is actually as twice as the density without this
+rule.
+That is , $\rho$ $\rightarrow$ $\dfrac{\rho}{2}$
+
+\begin{displaymath}
+Q = 2v_f(\dfrac{\rho}{2} -\dfrac{\frac{\rho}{2}}{\rho_j})
+= v_f(\rho - \dfrac{\rho^2}{2\rho _j})
+\end{displaymath}
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}{60pt}
+\centering
+	\includegraphics{v-p.png}
+%\caption{$v = 90 - 2.8 \rho$}
+\end{minipage}
+\hspace{10pt}
+\begin{minipage}{60pt}
+\centering
+ %label{fig: Safe distance model sketch}
+%\small
+	\includegraphics{Q-p.png}
+	%\caption{Sketch diagram of safe distance evaluation model}
+\end{minipage}
 \end{figure}
 
 
@@ -437,11 +460,45 @@ Thus, $v = 90 - 0.18 \rho$
 \section{Discussion}
 
 \subsection{Strengths}
-	
+
+\paragraph{Safety Model}
+
+\begin{itemize}
+\item We consider the cars are the uniform distribution. However, it can hardly happen in the reality. Our model may have some error comparing with the actual situation.
+\item We just consider a special situation where there is only one car overtaking. But in reality ,there may be a number of cars overtaking at the same time.
+\end{itemize}
+
+\paragraph{Traffic Flow Model}
+
+\begin{itemize}
+\item We assume the relationship between the velocity and traffic density suits the linear model. However, in reality, their relationship could just be negative correlation.
+\item We assume when average distance is the statutory safe distance, the average  velocity is 70km/h. The reason why we assume the average velocity is 70km/h is that we believe when the average is the statutory safe distance, the average velocity should be low. And we just pick put a special velocity.
+\end{itemize}
+
+\paragraph{Convenience Model}
+\begin{itemize}
+\item We consider the cars are the uniform distribution.
+\end{itemize}
+
 \subsection{Weaknesses}
+\paragraph{Safety Model}
 
+\begin{itemize}
+\item The safety model we get last get a certain function between the safety factor and traffic density. So it would be rather convenient to measure safety.
+\item We considered the human judgment by probability we quantitatively calculated.
+\end{itemize}
 
+\paragraph{Traffic Flow Model}
+\begin{itemize}
+\item The traffic model we get last get a certain function between the traffic flow factor and traffic density. So it would be rather convenient to measure traffic flow.
+\item We considered the relationship between the velocity and traffic density.
+\end{itemize}
 
+\paragraph{Convenience Model}
+\begin{itemize}
+\item The safety model we get last get a certain function between the convenience factor and traffic density. So it would be rather convenient to measure convenience.
+\item We considered the advantage of the right-most rule. 
+\end{itemize}
 % ==============================================================
 % References
 % ==============================================================
