@@ -116,11 +116,11 @@ are running.} To find the minimum safe distance between
 the two vehicles in this case, it is assumed that the 
 distance between them is the minimum safe distance $ L $. 
 The following vehicle's passing distance is the sum of 
-decelerating and driver reaction distances. The sum, 
-together with the minimum safe distance, is then the 
-decelerating distance of the leading vehicle. This 
-relation infers equation \ref{eq: Safe Distance 1 - 1}. 
-The driver's reaction time is the gap between deceleration 
+decelerating and driver reaction distances. The sum is 
+then the decelerating distance of the leading vehicle 
+together with the minimum safe distance. This relation 
+infers equation \ref{eq: Safe Distance 1 - 1}. The 
+driver's reaction time is the gap between deceleration 
 actions of the leading and following vehicles, which 
 infers equation \ref{eq: Safe Distance 1 - 2}. One thing 
 to notice, the crash speeds of both vehicles are identical. 
@@ -129,12 +129,13 @@ that crash can just happen, but small enough that the
 original distance is maximum to achieve safest minimum 
 distance. To sum up in mathematical language, when
 \begin{displaymath}
-\frac{v_2}{a_2}  \geq  \frac{v_1}{a_1} + t_r
+\frac{v_1}{a_1} + t_r < \frac{v_2}{a_2}
 \end{displaymath}
 two equations are inferred that 
 \begin{eqnarray}
-& \frac{v_1^2 - v_0 ^ 2}{2a_1} + v_1 t_r - L = \frac{v_2 ^ 2 
-- v_0 ^ 2}{2a_2} &\label{eq: Safe Distance 1 - 1}\\
+& \frac{v_1^2 - v_0 ^ 2}{2a_1} + v_1 t_r = L + \frac{
+v_2 ^ 2 - v_0 ^ 2}{2a_2} &
+\label{eq: Safe Distance 1 - 1}\\
 & \frac{v_1 - v_0}{a_1} = \frac{v_2 - v_0}{a_2} - t_r &
 \label{eq: Safe Distance 1 - 2}
 \end{eqnarray}
@@ -142,31 +143,42 @@ two equations are inferred that
 \item \textbf{The following vehicle crashes into the 
 leading vehicle after the leading one stops.} Similarly, 
 the distance between two vehicles is assumed as the minimum 
-safe distance $ L $. 
-
-That is, when
+safe distance $ L $. And the sum of decelerating and 
+reaction distance is the safe distance adding the leading 
+vehicle's deceleration distance, inferring equation 
+\ref{eq: Safe Distance 2}. That is, when
 \begin{displaymath}
-\frac{v_2}{a_2}  >  \frac{v_1}{a_1} + t_r
+\frac{v_1}{a_1} + t_r \geq \frac{v_2}{a_2}
 \end{displaymath}
-We have:
+the distance relation is 
 \begin{eqnarray}
-& v_1 t_r + \frac{v_1 ^ 2}{2a_1} - L = \frac{v_2^2}{2a_2} &
+& v_1 t_r + \frac{v_1 ^ 2}{2a_1} = L + \frac{v_2^2}{2a_2} &
 \label{eq: Safe Distance 2}
 \end{eqnarray}
 
 \end{itemize}
 
-Solve this equation array, we have
-\begin{displaymath}
+By solving for the safe distance $ L $, the function of 
+$ L $ is obtained that 
+\begin{equation}
 l(a_1, a_2, v_1, v_2) = 
 \left \{
 \begin{array}{cl}
-\dfrac{(a_1a_2t_r^2 + 2a_1t_rv_2 + v_1^2 - 2v_1v_2 + v_2^2)}{2(a_1-a_2)} & \dfrac{v_2}{a_2}  \geq \dfrac{v_1}{a_1} + t_r \\
-v_2 t_r + \dfrac{v_1 ^ 2}{2a_1} -\dfrac{v_2^2}{2a_2} & \dfrac{v_2}{a_2}  < \dfrac{v_1}{a_1} + t_r
+\dfrac{(a_1a_2t_r^2 + 2a_1t_rv_2 + v_1^2 - 2v_1v_2 + 
+v_2^2)}{2(a_1-a_2)} & 
+\dfrac{v_1}{a_1} + t_r < \dfrac{v_2}{a_2}\\
+v_2 t_r + \dfrac{v_1 ^ 2}{2a_1} -\dfrac{v_2^2}{2a_2} & 
+\dfrac{v_1}{a_1} + t_r \geq \dfrac{v_2}{a_2}
 \end{array}
 \right .
-\end{displaymath}
-\\
+\end{equation}
+
+This function describes the minimum safe distance that 
+ensures two adjacent vehicles will just do or do not 
+crash in given decelerations and velocities.
+
+
+\subsection{Statutory Minimum Safe Distance}
 
 To calculate $l_{max}$, firstly, we are going to find the extrema,
 
