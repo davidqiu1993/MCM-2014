@@ -1,0 +1,17 @@
+\contentsline {section}{\numberline {1}Introduction}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}Other Assumptions}{4}{subsection.1.1}
+\contentsline {section}{\numberline {2}Analysis of the Problem }{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}safety}{4}{subsection.2.1}
+\contentsline {paragraph}{Safe Distance Model}{4}{section*.1}
+\contentsline {paragraph}{$l${ } Distribution}{6}{section*.2}
+\contentsline {paragraph}{Safety Factor $\alpha $}{6}{section*.3}
+\contentsline {subsection}{\numberline {2.2}traffic flow}{6}{subsection.2.2}
+\contentsline {paragraph}{Assumption}{7}{section*.4}
+\contentsline {section}{\numberline {3}Calculating and Simplifying the Model }{8}{section.3}
+\contentsline {section}{\numberline {4}The Model Results}{8}{section.4}
+\contentsline {section}{\numberline {5}Validating the Model}{8}{section.5}
+\contentsline {section}{\numberline {6}Conclusions}{9}{section.6}
+\contentsline {section}{\numberline {7}A Summary }{9}{section.7}
+\contentsline {section}{\numberline {8}Evaluate of the Mode}{9}{section.8}
+\contentsline {section}{\numberline {9}Strengths and weaknesses}{9}{section.9}
+\contentsline {subsection}{\numberline {9.1}Strengths}{9}{subsection.9.1}
