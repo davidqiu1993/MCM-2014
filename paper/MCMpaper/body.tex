@@ -65,17 +65,18 @@ section \ref{sec: Convenience Factor}.
 \section{Safety Factor}
 \label{sec: Safety Factor}
 
-\emph{Assumptions}
+\subsection{Safe Distance Evaluation}
+\label{sec: Safe Distance Evaluation}
 
-The value of acceleration subjects to normal distribution, 
-$\mu = \frac{max(a)}{2}$, $\sigma = \frac{1}{4}\mu$, for 
-$p(0 < a_2 < \frac{1}{4} \mu)$ and 
-$p(\frac{7}{4} \mu < a_2 < 2\mu)$ is very small.
+On the freeway, if a vehicle suddenly slows down, the one 
+behind may crash into it. Consequently, a statutory 
+distance between each two adjacent vehicles is needed to 
+avoid danger. For instance in China, the minimum distance 
+is 100 meters between two vehicles on freeway of vehicle 
+speed over 100 km/s; and 50 meters on road below 100 km/s.
+\cite{PRC_State_Council_Decree_405}\\
 
-\subsection{Safe Distance Model}
-
-On the highway, if the car in front suddenly slows down, 
-it is likely that a car crash happens. We build this model 
+We build this model 
 to calculate the safe distance between two adjacent cars. 
 That is, if the adjacent $d \leq l$ and the car in front 
 suddenly slows down,the accident will not happen.\\ \\
@@ -384,8 +385,12 @@ Lighting. Society of Automotive Engineers. pp. 23-36.
 Right Side of the Road". United States Department of 
 Transportation. Retrieved 10 January 2014.
 
-\bibitem{Mick_Hamer_1986} Left is right on the road', Mick Hamer 
-New Scientist, 25 December 1986 - 1 January 1987 No 1540/1541, 
-p.16.
+\bibitem{Mick_Hamer_1986} Hamer, Mick. "Left is right on the 
+road", New Scientist, 25 December 1986 - 1 January 1987. No.
+1540/1541, p.16.
+
+\bibitem{PRC_State_Council_Decree_405} "Regulations for the Implementation of Law of the People's Republic of China on 
+Road Traffic Safety". The State Council of the P.R.C., 30 
+April 2004. Regulation No.80, Decree No.405.
 
 \end{thebibliography}

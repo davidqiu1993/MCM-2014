@@ -4,7 +4,7 @@
 \contentsline {paragraph}{Traffic Flow}{4}{section*.2}
 \contentsline {paragraph}{Convenience}{4}{section*.3}
 \contentsline {section}{\numberline {3}Safety Factor}{4}{section.3}
-\contentsline {subsection}{\numberline {3.1}Safe Distance Model}{4}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.1}Safe Distance Evaluation}{4}{subsection.3.1}
 \contentsline {paragraph}{$l${ } Distribution}{6}{section*.4}
 \contentsline {paragraph}{Safety Factor $\alpha $}{6}{section*.5}
 \contentsline {section}{\numberline {4}Traffic Flow Factor $\beta $}{7}{section.4}
