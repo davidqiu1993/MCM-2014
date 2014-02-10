@@ -452,6 +452,7 @@ to analysis.
 Under this situation, we assume that the distance between two adjacent cars are the
 safe distance. To simplify, the safe distance
 equals to 140$m$(The $l_{max}$ when speed spreads from 0 - 120 $km/h$, acceleration spreads from 0 - 8 $m/s^2$)
+
 \end{itemize}
 
 We have 
@@ -460,14 +461,17 @@ v = v_f(1 - \frac{\rho}{\rho_j})
 \end{equation}
 
 According to our assumption, when $v = 70km/h$, every 
-two adjacent cars keep the distance 140$m$. Therefore,
-the traffic density 
-$\rho_j = \frac{1000}{140} = 7.14$.
-By substitute the point (0, 90),(7.14, 70), 
-we get $v = 90 - 2.8 \rho$,
-let v = 0, we have
+two adjacent cars keep the distance 140$m$. We can do
+some calculations:
+\begin{enumerate}
+\item The traffic density 
+$\rho_j = \frac{1000}{140} = 7.14$, when $v = 70km/h$
+\item By substitute the point (0, 90),(7.14, 70), 
+we get $v = 90 - 2.8 \rho$
+\item Let v = 0, we have
 $\rho_j$ = 32.14,
 $Q = 90（(\rho - \dfrac{\rho ^2}{32.14})$
+\end{enumerate}
 
 Assume that no matter the situation is, with or without the 
 right-most rule,
@@ -484,24 +488,31 @@ Q = 2v_f(\dfrac{\rho}{2} -\dfrac{\frac{\rho}{2}}{\rho_j})
 = v_f(\rho - \dfrac{\rho^2}{2\rho _j})
 \end{displaymath}
 
-\begin{figure}[htbp]
+\begin{figure}
 \centering
-\begin{minipage}{60pt}
-\centering
-	\includegraphics{v-p.png}
-%\caption{$v = 90 - 2.8 \rho$}
-\end{minipage}
-\hspace{10pt}
-\begin{minipage}{60pt}
+	\includegraphics[width = 6cm]{v-p.png}
+\caption{$v - \rho$}
+\end{figure}
+
+\begin{figure}
 \centering
  %label{fig: Safe distance model sketch}
 %\small
-	\includegraphics{Q-p.png}
-	%\caption{Sketch diagram of safe distance evaluation model}
-\end{minipage}
+	\includegraphics[width = 6cm]{Q-p.png}
+	\caption{$Q-\rho$}
 \end{figure}
 
+$\rho_{max}$ = 7.14, for the situation with
+right-most rule, that is, $ 0 < \rho < 7.14$\\
+$\rho_{max}$ = 14.28, for the situation without
+right-most rule, that is, $0 < \rho < 14.28$\\
+From the figure, we can easily find that
+Q is higher when lacking the right-most rule.
 
+We conclude that right-most rule is not effective
+for traffic flow.
+ 
+\subsection{Convenience}
 % ==============================================================
 % Conclusions
 % ==============================================================
