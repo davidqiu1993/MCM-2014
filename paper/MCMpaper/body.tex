@@ -277,7 +277,8 @@ L_{max_2}'(a_2) > 0
 \end{equation}
 The \textbf{monotonicity} of $ L_{max} $ is proved.
 
-%\usepackage{amsmath}
+Thus the reversed function $ a2(L) $ exists, and it can 
+be expressed as followed.
 \[ a_2(l) = \begin{cases}
 -\dfrac{v_{max}^2 - 2v_{max}v_{min} + 2a_{min}t_rv_{max} + v_{min}^2 - 2a_{min}t_rv_{min} - 2la_{min}}{a_{min}t_r^2 + 2l}, 
 \\
@@ -285,12 +286,38 @@ The \textbf{monotonicity} of $ L_{max} $ is proved.
 \quad l \leq \dfrac{v_{max}^2 - v_{max}v_{min} + 2v_{max}a_{min}t_r - a_{min} v_{min}t_r}{2a_{min}}\\
 \dfrac{a_{min}v_{min}^2}{v_{max}^2 + 2a_{min}t_rv_{max} - 2la_{min}}, \quad  l > \dfrac{v_{max}^2 - v_{max}v_{min} + 2v_{max}a_{min}t_r - a_{min} v_{min}t_r}{2a_{min}}
 \end{cases}\]
-\\
 
-\paragraph{Safety Factor $\alpha$}
-For every car, it has a unique safety factor $\alpha$, the 
-closer the distance between two adjacent cars is, the smaller 
-the $\alpha$ is, vice versa.\\
+\paragraph{\emph{Assumptions}} The driver press the brake 
+always with strength that follows Gaussian distribution, 
+where $\mu = \frac{a_{max}}{2}$, $\sigma = \frac{1}{4}\mu$, 
+for $p(0 < a_2 < \frac{1}{4} \mu)$ and $p(\frac{7}{4} \mu 
+< a_2 < 2\mu)$ is rare. And the brake strength directly 
+determines a vehicle's deceleration, which means 
+\begin{equation}
+dp(a_2;\mu=\dfrac{a_{max}}{2},\sigma=\dfrac{a_{max}}{8})
+ = \dfrac{1}{\sqrt{2\pi}\sigma}\exp^{-\dfrac{(a_2-\mu)^2}
+{2\sigma^2}}
+\end{equation}
+
+Since the conversion functions between $ a2 $ and 
+$ L_{max} $ exist, the probability distribution of 
+deceleration is one-to-one projected to the safe distance 
+distribution. The nearer two vehicles are, the more 
+dangerous they are. So the integral of safe distance's 
+probability distribution is exactly the evaluation of 
+the safety, which is called the safety factor $ \aleph $. 
+Mathematically, the safety factor 
+\begin{equation}
+\alpha(L) = \int_{0}^{L}dp(x;\mu=\dfrac{a_{max}}{2},\sigma=\dfrac
+{a_{max}}{8})dx
+\end{equation}
+
+The greater the safety factor is, the safer a vehicle is. 
+And if the distance reaches statutory minimal safe distance, 
+\begin{equation}
+\alpha(L_{max}) = \int_{0}^{L_{max}}dp(x) \approx 1
+\end{equation}
+
 
 \begin{figure}[h]
 \small
@@ -298,18 +325,8 @@ the $\alpha$ is, vice versa.\\
 \includegraphics{draw_SafetyNormalDistribution_graph.png}
 \caption{safety factor distribution} \label{fig: safety factor distribution}
 \end{figure}
-\begin{displaymath}
-\alpha(l) = \int_{0}^{l} f(x) dx.
-\end{displaymath}
-%\textbf{Assumptions}\\
-%\begin{itemize}
-%\item d is the distance between two adjacent cars.
-%\end{itemize}
-We can see that , when $a_2$ = 0, that is, the front car 
-has the lowest deceleration. Since $l(a)$ is a monotone 
-increasing function, at this time,$l$ is minimal. In other 
-word, it is of little possibility that the distance is less 
-than the l, that is, $\alpha(l) \rightarrow 0$                     
+
+
 
 
 \section{Traffic Flow Factor $ \beta $}
