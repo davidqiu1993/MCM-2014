@@ -48,9 +48,10 @@ or a lane is, and its value can be calculated from evaluation
 functions discussed at section \ref{sec: Safety Factor}.
 
 \paragraph{Traffic Flow} The usage efficiency of a road is 
-called the traffic flow. It can be measured by \textbf{traffic 
-flow factor $\beta$}, detailed definition of which is found at 
-section \ref{sec: Traffic Flow Factor}.
+called the traffic flow. Such efficiency can be measured 
+by the \textbf{traffic flow factor $\beta$}, detailed 
+definition of which is found at section \ref{sec: Traffic 
+Flow Factor}.
 
 \paragraph{Convenience} In right- or left-hand traffic, 
 overtaking lane is designed redundantly, to provide 
@@ -208,23 +209,25 @@ partial differential equations simultaneously.
 \right .
 \end{displaymath}
 
-This equation array has no solution, which indicates we can 
-get the $l_{max}$ at the boundary of domain.
-
-$l$ reaches the maximum when $a_1$ equals to $a_{min}$, { }$v_1$ 
-equals to $v_{1max}$, $v_2$ equals to $v_{2min}$. (If the front 
-car drives with the lowest speed, the rear car drives with the 
-highest speed, and at the same time, rear car's acceleration is 
-the minimum, when emergency happens, the braking distance is 
-the longest.)
+This equation array has no solution, which indicates maximum 
+at the domain boundary. If the leading vehicle runs at the 
+lowest speed with the greatest deceleration, the following 
+vehicle at the highest speed with the minimum deceleration, 
+then the requested distance is the longest. In other words, 
+$ L $ reaches the maximum when $ a_1 = a_{min} $, $ v_1 = 
+v_{max} $, $ a_2 = a_{max} $ and $ v_2 = v_{min} $.
 
 Thus,
 \begin{displaymath}
-l_{max}(a_2) = 
+L_{max} = 
 \left \{
 \begin{array}{cl}
-\dfrac{(a_{min}a_2t_r^2 + 2a_{min}t_rv_{min} + v_{max}^2 - 2v_{max}v_{min} + v_{min}^2)}{2(a_{min}-a_2)} & \dfrac{v_{min}}{a_2}  \geq \dfrac{v_1}{a_1} + t_r \\
-v_{min} t_r + \dfrac{v_{max} ^ 2}{2a_{min}} -\dfrac{v_{min}^2}{2a_2} & \dfrac{v_2}{a_2}  < \dfrac{v_1}{a_1} + t_r
+\dfrac{(a_{min}a_{max}t_r^2 + 2a_{min}t_rv_{min} + v_{max}^2 - 
+2v_{max}v_{min} + v_{min}^2)}{2(a_{min}-a_{max}} & 
+\dfrac{v_{min}}{a_{max}}  \geq \dfrac{v_{max}}{a_{min}} + t_r \\
+v_{min} t_r + \dfrac{v_{max} ^ 2}{2a_{min}} - \dfrac{
+v_{min}^2}{2a_{max}} & \dfrac{v_{min}}{a_{max}}  < \dfrac{v_{max}}
+{a_{min}} + t_r
 \end{array}
 \right .
 \end{displaymath}\\
