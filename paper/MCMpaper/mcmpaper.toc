@@ -18,4 +18,10 @@
 \contentsline {section}{\numberline {7}Conclusions}{10}{section.7}
 \contentsline {section}{\numberline {8}Discussion}{10}{section.8}
 \contentsline {subsection}{\numberline {8.1}Strengths}{10}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Weaknesses}{10}{subsection.8.2}
+\contentsline {paragraph}{Safety Model}{10}{section*.9}
+\contentsline {paragraph}{Traffic Flow Model}{11}{section*.10}
+\contentsline {paragraph}{Convenience Model}{11}{section*.11}
+\contentsline {subsection}{\numberline {8.2}Weaknesses}{11}{subsection.8.2}
+\contentsline {paragraph}{Safety Model}{11}{section*.12}
+\contentsline {paragraph}{Traffic Flow Model}{11}{section*.13}
+\contentsline {paragraph}{Convenience Model}{11}{section*.14}
