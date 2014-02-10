@@ -236,7 +236,8 @@ situation with and without the right-most rule.
 Parameter & Discription\\
 \hline
 $\rho $ & The traffic density\\
-$\rho_j$ & The traffic density under the traffic jam condition\\
+$\rho_j$ & The traffic density under the traffic jam condition. \\
+&Under this condition, the distance between two adjant car is almost zero\\
 $\rho_m$ & The traffic density when the the traffic flow is the highest.\\
 $v_f$ & The velocity of the vehicle when the traffic density is small \\
 $Q$ & Traffic flow \\
@@ -288,23 +289,10 @@ What's more, it passes through the origin.
 \end{itemize}
 
 
-\begin{equation}
-J^* = J_{supply} - J_{need}
-\end{equation}
-
-\[ J^* = \begin{cases}
-0,\\
-\bar{l} - \bar{l}_{max}
-\end{cases}\]
-
 %\item Without the right-most rule, there is no overtaking lane, vehicle can stay on either lane at any time.
 %\item On the freeway, except the overtaking car, others are subject to the uniform distribution.
 %\end{itemize}
 
-
-\begin{displaymath}
-\beta = A\beta_1 + B\beta_2
-\end{displaymath}
 
 \section{Convenience Factor}\label{sec: Convenience Factor}
 Without the right-most rule, a vehicle can drive on both lane for a long time. Under this condition, the events will be more common that one car blocks another car. This means that overtaking will be difficult,
@@ -349,6 +337,34 @@ w = - \frac{2s}{\bar{l} + s}
 % ==============================================================
 
 \section{Model Analysis}
+
+\subsection{Traffic Flow}
+\paragraph{Assumption}
+\begin{itemize}
+\item The distribution of the
+vehicle velocity on the freeway
+is normal distribution with mean
+$\mu$ = 90 $km/h$. Since the speed 
+limits are ususally 60 $km/h$ and 120 $km/h$
+\item We take the interval 70$km/h$ - 90 $km/h$
+to analysis.????????????????????
+\end{itemize}
+
+We have 
+\begin{equation}
+v = v_f(1 - \frac{\rho}{\rho_j})
+\end{equation}
+In traffic jam, the distance between two adjacent car is zero, we take 2$m$ as the average car length. Therefore, the lowest
+traffic density 
+$\rho_j = \frac{1000}{2} = 500$.
+Thus, $v = 90 - 0.18 \rho$
+
+\begin{figure}[h]
+\small
+%\centering
+\includegraphics[width = 6cm]{v-p.png}
+%\caption{}
+\end{figure}
 
 
 % ==============================================================

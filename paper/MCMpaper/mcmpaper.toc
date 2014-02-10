@@ -12,6 +12,8 @@
 \contentsline {paragraph}{The relationship between $Q$ and $\rho $ }{8}{section*.7}
 \contentsline {section}{\numberline {5}Convenience Factor}{8}{section.5}
 \contentsline {section}{\numberline {6}Model Analysis}{9}{section.6}
+\contentsline {subsection}{\numberline {6.1}Traffic Flow}{9}{subsection.6.1}
+\contentsline {paragraph}{Assumption}{9}{section*.8}
 \contentsline {section}{\numberline {7}Conclusions}{9}{section.7}
 \contentsline {section}{\numberline {8}Discussion}{9}{section.8}
 \contentsline {subsection}{\numberline {8.1}Strengths}{9}{subsection.8.1}
