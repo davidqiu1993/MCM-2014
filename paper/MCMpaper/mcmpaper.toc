@@ -1,19 +1,18 @@
 \contentsline {section}{\numberline {1}Introduction}{4}{section.1}
-\contentsline {subsection}{\numberline {1.1}Other Assumptions}{4}{subsection.1.1}
-\contentsline {section}{\numberline {2}Analysis of the Problem }{4}{section.2}
-\contentsline {subsection}{\numberline {2.1}safety}{4}{subsection.2.1}
-\contentsline {paragraph}{Safe Distance Model}{4}{section*.1}
-\contentsline {paragraph}{$l${ } Distribution}{6}{section*.2}
-\contentsline {paragraph}{Safety Factor $\alpha $}{6}{section*.3}
+\contentsline {section}{\numberline {2}Performance Evaluation}{4}{section.2}
+\contentsline {paragraph}{Safety}{4}{section*.1}
+\contentsline {paragraph}{Traffic Flow}{4}{section*.2}
+\contentsline {paragraph}{Convenience}{4}{section*.3}
+\contentsline {subsection}{\numberline {2.1}Safety Factor}{4}{subsection.2.1}
+\contentsline {paragraph}{Safe Distance Model}{4}{section*.4}
+\contentsline {paragraph}{$l${ } Distribution}{6}{section*.5}
+\contentsline {paragraph}{Safety Factor $\alpha $}{6}{section*.6}
 \contentsline {subsection}{\numberline {2.2}traffic flow}{6}{subsection.2.2}
-\contentsline {paragraph}{Assumption}{7}{section*.4}
-\contentsline {subsection}{\numberline {2.3}Overtaking Model}{7}{subsection.2.3}
-\contentsline {paragraph}{Assumption}{7}{section*.5}
+\contentsline {paragraph}{Assumption}{7}{table.2}
 \contentsline {section}{\numberline {3}Calculating and Simplifying the Model }{8}{section.3}
 \contentsline {section}{\numberline {4}The Model Results}{8}{section.4}
-\contentsline {section}{\numberline {5}Validating the Model}{9}{section.5}
-\contentsline {section}{\numberline {6}Conclusions}{9}{section.6}
-\contentsline {section}{\numberline {7}A Summary }{9}{section.7}
-\contentsline {section}{\numberline {8}Evaluate of the Mode}{9}{section.8}
-\contentsline {section}{\numberline {9}Strengths and weaknesses}{9}{section.9}
-\contentsline {subsection}{\numberline {9.1}Strengths}{9}{subsection.9.1}
+\contentsline {section}{\numberline {5}Conclusions}{8}{section.5}
+\contentsline {section}{\numberline {6}A Summary }{8}{section.6}
+\contentsline {section}{\numberline {7}Evaluate of the Mode}{8}{section.7}
+\contentsline {section}{\numberline {8}Strengths and weaknesses}{8}{section.8}
+\contentsline {subsection}{\numberline {8.1}Strengths}{8}{subsection.8.1}

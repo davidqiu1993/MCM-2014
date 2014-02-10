@@ -1,5 +1,5 @@
 
-%====================================问题介绍====================================
+%===================== [ INTRODUCTION ] =====================
 
 \section{Introduction}
 
@@ -24,36 +24,22 @@ freeway traffic model and analyses performances of the two
 models.
 
 
-\subsection{Other Assumptions}
+% =================== [ ANALYSIS ] =======================
 
-\begin{itemize}
-\item
-\item
-\item
-\item
-\end{itemize}
-
- Under the above and basic assumptions, we can set out
-to construct our model (show our approach in detail).
-
-
-%====================================问题分析====================================
-
-\section{Analysis of the Problem }
+\section{Performance Evaluation}
 
 Performance of a traffic rule is determined by the three 
 creteria below: 
-\subparagraph{Safety} xxxxx
-\subparagraph{Traffic Flow} xxxxxxxxx
-\subparagraph{Convenience} xxxxxxx
+\paragraph{Safety} xxxxx
+\paragraph{Traffic Flow} xxxxxxxxx
+\paragraph{Convenience} xxxxxxx
 
-\subsection{Safety}
+\subsection{Safety Factor}
+
 \emph{Assumptions}
-
 The value of acceleration subjects to normal distribution, $\mu = \frac{max(a)}{2}$,
 $\sigma = \frac{1}{4}\mu$, for $p(0 < a_2 < \frac{1}{4} \mu)$ and $p(\frac{7}{4} \mu < a_2 < 2\mu)$ is very small.
 
-%==================================模型建立==============================================
 \paragraph{Safe Distance Model}
 
 On the highway, if the car in front suddenly slows down, it is likely that a car crash happens.
@@ -182,7 +168,7 @@ Since the layout of the cars on the freeway is complicated, to simplify, we use 
 \\
 \paragraph{Assumption}
 
-\begin{itemize}
+%\begin{itemize}
 %\item the rest flow on a single lane drive with a constant speed.
 
 \begin{table}
@@ -197,43 +183,42 @@ $k_m$ & The traffic density when the the traffic flow is the highest.\\
 $v_f$ & The velocity when the traffic density is small \\
 $Q$ & Traffic flow \\
 %$N$ & The total number of the car on the freeway
-
 \hline
 \end{tabular}
 \caption{Model parameter}
 \end{table}
 
-\subsection{Con Model}
-\paragraph{Assumption}
-\begin{itemize}
-\item Only one car are overtaking, the others are driving with a constant speed
-\item Every overtaking, pass only one car
-\end{itemize}
+%\subsection{Con Model}
+%\paragraph{Assumption}
+%\begin{itemize}
+%\item Only one car are overtaking, the others are driving with a constant speed
+%\item Every overtaking, pass only one car
+%\end{itemize}
+
 \begin{equation}
 J^* = J_{supply} - J_{need}
 \end{equation}
-\item 
+
 \[ J^* = \begin{cases}
 0,\\
 \bar{l} - \bar{l}_{max}
 \end{cases}\]
 
-\item Without the right-most rule, there is no overtaking lane, vehicle can stay on either lane at any time.
-\item On the freeway, except the overtaking car, others are subject to the uniform distribution.
-\end{itemize}
+%\item Without the right-most rule, there is no overtaking lane, vehicle can stay on either lane at any time.
+%\item On the freeway, except the overtaking car, others are subject to the uniform distribution.
+%\end{itemize}
 
 
 \begin{displaymath}
 \beta = A\beta_1 + B\beta_2
 \end{displaymath}
-(A, B are weight)
 
-\begin{itemize}
-\item 
-\begin{displaymath}
-\beta_1 = \frac{J_1 - J_2}{J_2}
-\end{displaymath}
-\end{itemize}
+%\begin{itemize}
+%\item 
+%\begin{displaymath}
+%\beta_1 = \frac{J_1 - J_2}{J_2}
+%\end{displaymath}
+%\end{itemize}
 
 \begin{table}
 \centering
@@ -251,93 +236,28 @@ $\bar{v}$ & the average velocity\\
 \end{tabular}
 \caption{Model parameter}
 \end{table}
-Supply
-Demand
-\section{Calculating and Simplifying the Model  } ``A is equivalent
-to B'' Although Mr. Gore has expressed concerns to some associates
-about the damage a brokered convention could cause, several
-associates said he was hopeful that one candidate would soon break
-through, sparing the party such an outcome. He told a close friend
-recently that his decision not to endorse ``feels like the right
-thing'' and that he remained optimistic the race ``is going to tip
-at some point,'' the friend said.
+\section{Calculating and Simplifying the Model  }
 
 
 
 %===============================模型结果============================================
 \section{The Model Results}
-Although Mr. Gore has expressed concerns to some associates about
-the damage a brokered convention could cause, several associates
-said he was hopeful that one candidate would soon break through,
-sparing the party such an outcome. He told a close friend recently
-that his decision not to endorse ``feels like the right thing''
-and that he remained optimistic the race ``is going to tip at some
-point,'' the friend said.
 
-
-%========================模型的实效分析（适应性说明）=============================
-
-\section{Validating the Model}%确认模型，使之合理。
-Although Mr. Gore has expressed concerns to some associates about
-the damage a brokered convention could cause, several associates
-said he was hopeful that one candidate would soon break through,
-sparing the party such an outcome. He told a close friend recently
-that his decision not to endorse ``feels like the right thing''
-and that he remained optimistic the race ``is going to tip at some
-point,'' the friend said. Although Mr. Gore has expressed concerns
-to some associates about the damage a brokered convention could
-cause, several associates said he was hopeful that one candidate
-would soon break through, sparing the party such an outcome. He
-told a close friend recently that his decision not to endorse
-``feels like the right thing'' and that he remained optimistic the
-race ``is going to tip at some point,'' the friend said.
-
-
-Although Mr. Gore has expressed concerns to some associates about
-the damage a brokered convention could cause, several associates
-said he was hopeful that one candidate would soon break through,
-sparing the party such an outcome. He told a close friend recently
-that his decision not to endorse ``feels like the right thing''
-and that he remained optimistic the race ``is going to tip at some
-point,'' the friend said.
 
 \section{Conclusions}
-Although Mr. Gore has expressed concerns to some associates about
-the damage a brokered convention could cause, several associates
-said he was hopeful that one candidate would soon break through,
-sparing the party such an outcome. He told a close friend recently
-that his decision not to endorse ``feels like the right thing''
-and that he remained optimistic the race ``is going to tip at some
-point,'' the friend said.
+
 \section{A Summary    }
-Although Mr. Gore has expressed concerns to some associates about
-the damage a brokered convention could cause, several associates
-said he was hopeful that one candidate would soon break through,
-sparing the party such an outcome. He told a close friend recently
-that his decision not to endorse ``feels like the right thing''
-and that he remained optimistic the race ``is going to tip at some
-point,'' the friend said.
+
 %================================总体评价==============================
 \section{Evaluate of the Mode}
 
 %======================================================================
 \section{Strengths and weaknesses}
-Like any model,the one present above has its strengths and
-weaknesses. Some of the major points are presented below.
+
 
 %============================模型=优点====================================
 \subsection{Strengths}
-\begin{itemize}
-\item \textbf{Applies widely}\\
-This  system can be used for many types of airplanes, and it also
-solves the interference during  the procedure of the boarding
-airplane,as described above we can get to the  optimization
-boarding time.We also know that all the service is automate.
-\item \textbf{Improve the quality of the airport service}\\
-Balancing the cost of the cost and the benefit, it will bring in
-more convenient  for airport and passengers.It also saves many
-human resources for the airline. \item \textbf{}
-\end{itemize}
+
 
 
 
