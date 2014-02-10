@@ -4,6 +4,7 @@
 % ==============================================================
 
 \section{Introduction}
+\label{sec: Introduction}
 
 In bidirectional traffic, right- and left-hand traffic requires 
 vehicles keep either to the right or the left side of the road, 
@@ -33,22 +34,36 @@ models.
 % ==============================================================
 
 \section{Performance Evaluation}
+\label{sec: Performance Evaluation}
 
 Performance of a traffic rule is determined by the three 
 criteria below: 
 
-\paragraph{Safety} Distance and braking capability of adjacent 
-vehicles, and speed limits of the road, together affects the 
-safety. \textbf{Safety factor \alpha} is a value to measure 
-how safe a vehicle is, and its value can be calculated from 
-a safety evaluation function discussed at the next section.
+\paragraph{Safety} Average flow density and braking capability 
+of vehicles, and lane speed limits, together affect the safety 
+state of the freeway. Overtaking action will change local flow 
+density and thus disturb the safety state. \textbf{Safety 
+factor $\alpha$} is a value that measures how safe a vehicle 
+or a lane is, and its value can be calculated from evaluation 
+functions discussed at section \ref{sec: Safety Factor}.
 
-\paragraph{Traffic Flow} xxxxxxxxx
+\paragraph{Traffic Flow} The usage efficiency of a road is 
+called the traffic flow. It can be measured by \textbf{traffic 
+flow factor $\beta$}, detailed definition of which is found at 
+section \ref{sec: Traffic Flow Factor}.
 
-\paragraph{Convenience} xxxxxxx
+\paragraph{Convenience} In right- or left-hand traffic, 
+overtaking lane is designed redundantly, to provide 
+convenience for vehicles in hurry to pass others, or handle 
+emergency. Freeways without overtaking lane give extra flow, 
+but decrease convenience feature, which is neither described 
+in safety nor in traffic flow factors. Hence definition of 
+\textbf{convenience factor $\gamma$} is necessary, found at  
+section \ref{sec: Convenience Factor}.
 
 
 \section{Safety Factor}
+\label{sec: Safety Factor}
 
 \emph{Assumptions}
 
@@ -185,7 +200,7 @@ the $\alpha$ is, vice versa.\\
 \small
 \centering
 \includegraphics{draw_SafetyNormalDistribution_graph.png}
-\caption{safety factor distribution} \label{fig::safety factor distribution}
+\caption{safety factor distribution} \label{fig: safety factor distribution}
 \end{figure}
 \begin{displaymath}
 \alpha(l) = \int_{0}^{l} f(x) dx.
@@ -201,7 +216,7 @@ word, it is of little possibility that the distance is less
 than the l, that is, $\alpha(l) \rightarrow 0$                     
 
 
-\section{Traffic Flow Factor}
+\section{Traffic Flow Factor}\label{sec: Traffic Flow Factor}
 Since the layout of the cars on the freeway is complicated, 
 to simplify, we use a special model to discuss the 
 relationship between the safety and traffic flow under the 
@@ -279,7 +294,7 @@ $\bar{v}$ & the average velocity\\
 \end{table}
 
 
-\section{Convenience Factor}
+\section{Convenience Factor}\label{sec: Convenience Factor}
 
 
 % ==============================================================
