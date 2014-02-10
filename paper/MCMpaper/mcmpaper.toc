@@ -5,8 +5,9 @@
 \contentsline {paragraph}{Convenience}{4}{section*.3}
 \contentsline {section}{\numberline {3}Safety Factor}{4}{section.3}
 \contentsline {subsection}{\numberline {3.1}Safe Distance Evaluation}{4}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Statutory Minimum Safe Distance}{6}{subsection.3.2}
 \contentsline {paragraph}{$l${ } Distribution}{6}{section*.4}
-\contentsline {paragraph}{Safety Factor $\alpha $}{6}{section*.5}
+\contentsline {paragraph}{Safety Factor $\alpha $}{7}{section*.5}
 \contentsline {section}{\numberline {4}Traffic Flow Factor $\beta $}{7}{section.4}
 \contentsline {paragraph}{The relationship between $v$ and $\rho $ }{7}{section*.6}
 \contentsline {paragraph}{The relationship between $Q$ and $\rho $ }{8}{section*.7}
