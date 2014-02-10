@@ -1,5 +1,7 @@
 
-%===================== [ INTRODUCTION ] =====================
+% ==============================================================
+% Introduction
+% ==============================================================
 
 \section{Introduction}
 
@@ -7,7 +9,8 @@ In bidirectional traffic, right- and left-hand traffic requires
 vehicles keep either to the right or the left side of the road, 
 respectively.\cite{Draper_Geoff_1993} The first right-hand 
 traffic law in United State dates back to 1792, applied to the 
-Philadelphia and Lancaster Turnpike.\cite{Weingroff_Richard_2014}\\
+Philadelphia and Lancaster Turnpike.
+\cite{Weingroff_Richard_2014}\\
 
 The right-hand traffic rule derives regulations on multi-lane 
 freeways, which often requires drivers to drive in the 
@@ -24,27 +27,40 @@ freeway traffic model and analyses performances of the two
 models.
 
 
-% =================== [ ANALYSIS ] =======================
+
+% ==============================================================
+% Modeling
+% ==============================================================
 
 \section{Performance Evaluation}
 
 Performance of a traffic rule is determined by the three 
 creteria below: 
+
 \paragraph{Safety} xxxxx
+
 \paragraph{Traffic Flow} xxxxxxxxx
+
 \paragraph{Convenience} xxxxxxx
 
-\subsection{Safety Factor}
+
+\section{Safety Factor}
 
 \emph{Assumptions}
-The value of acceleration subjects to normal distribution, $\mu = \frac{max(a)}{2}$,
-$\sigma = \frac{1}{4}\mu$, for $p(0 < a_2 < \frac{1}{4} \mu)$ and $p(\frac{7}{4} \mu < a_2 < 2\mu)$ is very small.
 
-\paragraph{Safe Distance Model}
+The value of acceleration subjects to normal distribution, 
+$\mu = \frac{max(a)}{2}$, $\sigma = \frac{1}{4}\mu$, for 
+$p(0 < a_2 < \frac{1}{4} \mu)$ and 
+$p(\frac{7}{4} \mu < a_2 < 2\mu)$ is very small.
 
-On the highway, if the car in front suddenly slows down, it is likely that a car crash happens.
-We build this model to calculate the safe distance between two adjacent cars. That is ,
-if the adjacent $d \leq l$ and the car in front suddenly slows down,the accident will not happen.\\ \\
+\subsection{Safe Distance Model}
+
+On the highway, if the car in front suddenly slows down, 
+it is likely that a car crash happens. We build this model 
+to calculate the safe distance between two adjacent cars. 
+That is, if the adjacent $d \leq l$ and the car in front 
+suddenly slows down,the accident will not happen.\\ \\
+
 \begin{table}
 \centering
 \begin{tabular}{ll}
@@ -58,7 +74,8 @@ $v_1$ & the velocity of the  car in front \\
 $t_r$ & the driver's reaction time \\
 $t$ & the total time whole process \\
 $l$ & the safe distance \\
-$d$ & a constant which is the real distance between the car in front and the car in behind.\\
+$d$ & a constant which is the real distance between the 
+car in front and the car in behind.\\
 \hline
 \end{tabular}
 \caption{Model parameter}
@@ -68,10 +85,11 @@ $d$ & a constant which is the real distance between the car in front and the car
 \small
 \centering
 \includegraphics{situation.png}
-\caption{} %\label{fig::collision}
+\caption{}
 \end{figure}
 
-There are two possible situations that the accident will happen:
+There are two possible situations that the accident will 
+happen:
 \begin{itemize}
 \item The accident happens after the car in front stopped.
 That is, when
@@ -84,7 +102,8 @@ We have:
 \frac{v_2 - v_0}{a_2} & = & t\\
 \frac{v_1 - v_0}{a_1} & = & t - t_r
 \end{eqnarray}
-\item The collision happens before the car in front stopped. That is, when
+\item The collision happens before the car in front stopped. 
+That is, when
 \begin{displaymath}
 \frac{v_2}{a_2}  >  \frac{v_1}{a_1} + t_r
 \end{displaymath}
@@ -119,11 +138,17 @@ To calculate $l_{max}$, firstly, we are going to find the extrema,
 \right .
 \end{displaymath}
 
-This equation array has no solution, which indicates that we can get the $l_{max}$ at the boundary of domain.
+This equation array has no solution, which indicates that we can 
+get the $l_{max}$ at the boundary of domain.
 
-$l$ reaches the maximum when $a_1$ equals to $a_{min}$, { }$v_1$ equals to $v_{1max}$, $v_2$ equals to $v_{2min}$. (If the front car drives with the lowest speed, the rear car drives with the highest speed, and at the same time, rear car's acceleration is the minimum, when emergency happens, the braking distance is the longest.)
+$l$ reaches the maximum when $a_1$ equals to $a_{min}$, { }$v_1$ 
+equals to $v_{1max}$, $v_2$ equals to $v_{2min}$. (If the front 
+car drives with the lowest speed, the rear car drives with the 
+highest speed, and at the same time, rear car's acceleration is 
+the minimum, when emergency happens, the braking distance is 
+the longest.)
 
-Thus, we have:
+Thus,
 \begin{displaymath}
 l_{max}(a_2) = 
 \left \{
@@ -146,8 +171,12 @@ From the result above, we can get $a_2(l)$
 \dfrac{a_{min}v_{min}^2}{v_{max}^2 + 2a_{min}t_rv_{max} - 2la_{min}}, \quad  l > \dfrac{v_{max}^2 - v_{max}v_{min} + 2v_{max}a_{min}t_r - a_{min} v_{min}t_r}{2a_{min}}
 \end{cases}\]
 \\
+
 \paragraph{Safety Factor $\alpha$}
-For every car, it has a unique safety factor $\alpha$, the closer the distance between two adjacent cars is, the smaller the $\alpha$ is, vice versa.\\
+For every car, it has a unique safety factor $\alpha$, the 
+closer the distance between two adjacent cars is, the smaller 
+the $\alpha$ is, vice versa.\\
+
 \begin{figure}[h]
 \small
 \centering
@@ -161,10 +190,18 @@ For every car, it has a unique safety factor $\alpha$, the closer the distance b
 %\begin{itemize}
 %\item d is the distance between two adjacent cars.
 %\end{itemize}
-We can see that , when $a_2$ = 0, that is, the front car has the lowest deceleration. Since $l(a)$ is a monotone increasing function, at this time,$l$ is minimal. In other word, it is of little possibility that the distance is less than the l, that is, $\alpha(l) \rightarrow 0$                     
+We can see that , when $a_2$ = 0, that is, the front car 
+has the lowest deceleration. Since $l(a)$ is a monotone 
+increasing function, at this time,$l$ is minimal. In other 
+word, it is of little possibility that the distance is less 
+than the l, that is, $\alpha(l) \rightarrow 0$                     
 
-\subsection{traffic flow}
-Since the layout of the cars on the freeway is complicated, to simplify, we use a special model to discuss the relationship between the safety and traffic flow under the situation with and without the right-most rule.
+
+\section{Traffic Flow Factor}
+Since the layout of the cars on the freeway is complicated, 
+to simplify, we use a special model to discuss the 
+relationship between the safety and traffic flow under the 
+situation with and without the right-most rule.
 \\
 \paragraph{Assumption}
 
@@ -236,41 +273,54 @@ $\bar{v}$ & the average velocity\\
 \end{tabular}
 \caption{Model parameter}
 \end{table}
-\section{Calculating and Simplifying the Model  }
 
 
+\section{Convenience Factor}
 
-%===============================模型结果============================================
-\section{The Model Results}
 
+% ==============================================================
+% Analysis
+% ==============================================================
+
+\section{Model Analysis}
+
+
+% ==============================================================
+% Conclusions
+% ==============================================================
 
 \section{Conclusions}
 
-\section{A Summary    }
-
-%================================总体评价==============================
-\section{Evaluate of the Mode}
-
-%======================================================================
-\section{Strengths and weaknesses}
 
 
-%============================模型=优点====================================
+% ==============================================================
+% Discussion
+% ==============================================================
+
+\section{Discussion}
+
 \subsection{Strengths}
+	
+\subsection{Weaknesses}
 
 
 
-
+% ==============================================================
+% References
+% ==============================================================
 
 \begin{thebibliography}{99}
-%\addcontentsline{toc}{section}{References}
+
 \bibitem{Draper_Geoff_1993} Draper, Geoff (1993). "Harmonised 
 Headlamp Design for Worldwide Application". Motor Vehicle 
 Lighting. Society of Automotive Engineers. pp. 23-36.
+
 \bibitem{Weingroff_Richard_2014} Weingroff, Richard. "On The 
 Right Side of the Road". United States Department of 
 Transportation. Retrieved 10 January 2014.
+
 \bibitem{Mick_Hamer_1986} Left is right on the road', Mick Hamer 
 New Scientist, 25 December 1986 - 1 January 1987 No 1540/1541, 
 p.16.
+
 \end{thebibliography}

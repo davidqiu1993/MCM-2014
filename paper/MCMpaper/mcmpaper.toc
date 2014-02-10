@@ -3,16 +3,15 @@
 \contentsline {paragraph}{Safety}{4}{section*.1}
 \contentsline {paragraph}{Traffic Flow}{4}{section*.2}
 \contentsline {paragraph}{Convenience}{4}{section*.3}
-\contentsline {subsection}{\numberline {2.1}Safety Factor}{4}{subsection.2.1}
-\contentsline {paragraph}{Safe Distance Model}{4}{section*.4}
-\contentsline {paragraph}{$l${ } Distribution}{6}{section*.5}
-\contentsline {paragraph}{Safety Factor $\alpha $}{6}{section*.6}
-\contentsline {subsection}{\numberline {2.2}traffic flow}{6}{subsection.2.2}
+\contentsline {section}{\numberline {3}Safety Factor}{4}{section.3}
+\contentsline {subsection}{\numberline {3.1}Safe Distance Model}{4}{subsection.3.1}
+\contentsline {paragraph}{$l${ } Distribution}{6}{section*.4}
+\contentsline {paragraph}{Safety Factor $\alpha $}{6}{section*.5}
+\contentsline {section}{\numberline {4}Traffic Flow Factor}{7}{section.4}
 \contentsline {paragraph}{Assumption}{7}{table.2}
-\contentsline {section}{\numberline {3}Calculating and Simplifying the Model }{8}{section.3}
-\contentsline {section}{\numberline {4}The Model Results}{8}{section.4}
-\contentsline {section}{\numberline {5}Conclusions}{8}{section.5}
-\contentsline {section}{\numberline {6}A Summary }{8}{section.6}
-\contentsline {section}{\numberline {7}Evaluate of the Mode}{8}{section.7}
-\contentsline {section}{\numberline {8}Strengths and weaknesses}{8}{section.8}
+\contentsline {section}{\numberline {5}Convenience Factor}{8}{section.5}
+\contentsline {section}{\numberline {6}Model Analysis}{8}{section.6}
+\contentsline {section}{\numberline {7}Conclusions}{8}{section.7}
+\contentsline {section}{\numberline {8}Discussion}{8}{section.8}
 \contentsline {subsection}{\numberline {8.1}Strengths}{8}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Weaknesses}{8}{subsection.8.2}
