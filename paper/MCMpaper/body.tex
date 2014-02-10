@@ -76,10 +76,8 @@ is 100 meters between two vehicles on freeway of vehicle
 speed over 100 km/s; and 50 meters on road below 100 km/s.
 \cite{PRC_State_Council_Decree_405}\\
 
-We build this model 
-to calculate the safe distance between two adjacent cars. 
-That is, if the adjacent $d \leq l$ and the car in front 
-suddenly slows down,the accident will not happen.\\ \\
+A more precise evaluation model is established to enable 
+analysis in continuous mathematics.
 
 \begin{table}
 \centering
@@ -87,15 +85,14 @@ suddenly slows down,the accident will not happen.\\ \\
 \hline
 Parameter & Description\\
 \hline
-$a_1$ & the acceleration of the  car in behind \\
-$v_1$ & the velocity of the  car in front \\
-$a_2$ & the acceleration of the car in front \\
-$v_1$ & the velocity of the  car in front \\
-$t_r$ & the driver's reaction time \\
-$t$ & the total time whole process \\
-$l$ & the safe distance \\
-$d$ & a constant which is the real distance between the 
-car in front and the car in behind.\\
+$a_1$ & Deceleration of the following vehicle \\
+$v_1$ & Velocity of the following vehicle \\
+$a_2$ & Deceleration of the leading vehicle \\
+$v_1$ & Velocity of the leading vehicle \\
+$t_r$ & Reaction time of the driver \\
+$L$   & the safe distance \\
+$t$   & Global time throughout the whole process \\
+$d$   & Distance between the following and leading vehicles\\
 \hline
 \end{tabular}
 \caption{Model parameter}
