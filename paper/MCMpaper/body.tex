@@ -161,7 +161,7 @@ the distance relation is
 By solving for the safe distance $ L $, the function of 
 $ L $ is obtained that 
 \begin{equation}
-l(a_1, a_2, v_1, v_2) = 
+L(a_1, a_2, v_1, v_2) = 
 \left \{
 \begin{array}{cl}
 \dfrac{(a_1a_2t_r^2 + 2a_1t_rv_2 + v_1^2 - 2v_1v_2 + 
@@ -180,20 +180,35 @@ crash in given decelerations and velocities.
 
 \subsection{Statutory Minimum Safe Distance}
 
-To calculate $l_{max}$, firstly, we are going to find the extrema,
+To ensure absolute safety on freeway, statutory minimum 
+safe distance is defined as the maximum value of safe 
+distance $ L_{max} $ in all possible conditions. Denote 
+the lower speed limit as $ v_{min} $, upper speed limit as 
+$ v_{max} $, maximum deceleration of the vehicle with the 
+worst braking system as $ a_{min} $, and that of the 
+vehicle with the best braking system as $ a_{max} $. Then 
+the statutory minimum safe distance
+\begin{equation}
+L_{max} = MAX(L(a_1,a_2,v_1,v_2))
+\end{equation}
+where $ a_{min} \le a_1,a_2 \le a_{max} $ and $ v_{min} 
+\le v_1,v_2 \le v_{max} $.
 
+To solve for the maximum value of $ L $, extrema are 
+firstly inspected by finding the solution of the following 
+partial differential equations simultaneously.
 \begin{displaymath}
 \left \{
 \begin{array}{cl}
-\dfrac{\partial l}{\partial{a_1}} = 0 \\
-\dfrac{\partial l}{\partial{a_2}} = 0 \\
-\dfrac{\partial l}{\partial{v_1}} = 0 \\
-\dfrac{\partial l}{\partial{v_2}} = 0 \\
+\dfrac{\partial L}{\partial{a_1}} = 0 \\
+\dfrac{\partial L}{\partial{a_2}} = 0 \\
+\dfrac{\partial L}{\partial{v_1}} = 0 \\
+\dfrac{\partial L}{\partial{v_2}} = 0 \\
 \end{array}
 \right .
 \end{displaymath}
 
-This equation array has no solution, which indicates that we can 
+This equation array has no solution, which indicates we can 
 get the $l_{max}$ at the boundary of domain.
 
 $l$ reaches the maximum when $a_1$ equals to $a_{min}$, { }$v_1$ 
