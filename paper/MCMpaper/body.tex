@@ -11,7 +11,7 @@ vehicles keep either to the right or the left side of the road,
 respectively.\cite{Draper_Geoff_1993} The first right-hand 
 traffic law in United State dates back to 1792, applied to the 
 Philadelphia and Lancaster Turnpike.
-\cite{Weingroff_Richard_2014}\\
+\cite{Weingroff_Richard_2014}
 
 The right-hand traffic rule derives regulations on multi-lane 
 freeways, which often requires drivers to drive in the 
@@ -19,7 +19,7 @@ right-most lane unless they are passing another vehicle, in
 which case they move one lane to the left, pass, and return 
 to their former travel lane. The overtaking lane provides 
 redundant convenience and safety for vehicles to pass others, 
-but lowers freeway's traffic flow capability.\\
+but lowers freeway's traffic flow capability.
 
 Different models may exist that provide a better trade-off 
 among traffic flow, safety and convenience. This paper 
@@ -48,9 +48,10 @@ or a lane is, and its value can be calculated from evaluation
 functions discussed at section \ref{sec: Safety Factor}.
 
 \paragraph{Traffic Flow} The usage efficiency of a road is 
-called the traffic flow. It can be measured by \textbf{traffic 
-flow factor $\beta$}, detailed definition of which is found at 
-section \ref{sec: Traffic Flow Factor}.
+called the traffic flow. Such efficiency can be measured 
+by the \textbf{traffic flow factor $\beta$}, detailed 
+definition of which is found at section \ref{sec: Traffic 
+Flow Factor}.
 
 \paragraph{Convenience} In right- or left-hand traffic, 
 overtaking lane is designed redundantly, to provide 
@@ -62,7 +63,7 @@ in safety nor in traffic flow factors. Hence definition of
 section \ref{sec: Convenience Factor}.
 
 
-\section{Safety Factor}
+\section{Safety Factor $ \aleph $}
 \label{sec: Safety Factor}
 
 \subsection{Safe Distance Evaluation}
@@ -74,7 +75,7 @@ distance between each two adjacent vehicles is needed to
 avoid danger. For instance in China, the minimum distance 
 is 100 meters between two vehicles on freeway of vehicle 
 speed over 100 km/s; and 50 meters on road below 100 km/s.
-\cite{PRC_State_Council_Decree_405}\\
+\cite{PRC_State_Council_Decree_405}
 
 A more precise evaluation model is established to enable 
 analysis in continuous mathematics. Parameters required 
@@ -159,7 +160,8 @@ the distance relation is
 \end{itemize}
 
 By solving for the safe distance $ L $, the function of 
-$ L $ is obtained that 
+$ L $, the \textbf{safe distance evaluation function}, is 
+obtained that 
 \begin{equation}
 L(a_1, a_2, v_1, v_2) = 
 \left \{
@@ -208,29 +210,72 @@ partial differential equations simultaneously.
 \right .
 \end{displaymath}
 
-This equation array has no solution, which indicates we can 
-get the $l_{max}$ at the boundary of domain.
+This equation array has no solution, which indicates maximum 
+at the domain boundary. If the leading vehicle runs at the 
+lowest speed with the greatest deceleration, the following 
+vehicle at the highest speed with the minimum deceleration, 
+then the requested distance is the longest. In other words, 
+$ L $ reaches the maximum when $ a_1 = a_{min} $, $ v_1 = 
+v_{max} $, $ a_2 = a_{max} $ and $ v_2 = v_{min} $.
 
-$l$ reaches the maximum when $a_1$ equals to $a_{min}$, { }$v_1$ 
-equals to $v_{1max}$, $v_2$ equals to $v_{2min}$. (If the front 
-car drives with the lowest speed, the rear car drives with the 
-highest speed, and at the same time, rear car's acceleration is 
-the minimum, when emergency happens, the braking distance is 
-the longest.)
-
-Thus,
+By substituting boundary values into the safe distance 
+evaluation function, the condition below is satisfied that 
 \begin{displaymath}
-l_{max}(a_2) = 
+\dfrac{v_{min}}{a_{max}}  < \dfrac{v_{max}}{a_{min}} + t_r
+\end{displaymath}
+
+Hence the statutory minimum safety distance 
+\begin{displaymath}
+L_{max} = v_{min} t_r + \dfrac{v_{max} ^ 2}{2a_{min}} - 
+\dfrac{v_{min}^2}{2a_{max}}
+\end{displaymath}
+
+
+\subsection{Safety Evaluation Function}
+
+By substituting $ a_1 = a_{min} $, $ v_1 = v_{max} $ and 
+$ v_2 = v_{min} $ to the safe distance evaluation function, 
+the maximum-safe-distance function $ L_{max} $ with 
+parameter $ a_2 $ is obtained that
+\begin{displaymath}
+L_{max}(a_2) = 
 \left \{
 \begin{array}{cl}
-\dfrac{(a_{min}a_2t_r^2 + 2a_{min}t_rv_{min} + v_{max}^2 - 2v_{max}v_{min} + v_{min}^2)}{2(a_{min}-a_2)} & \dfrac{v_{min}}{a_2}  \geq \dfrac{v_1}{a_1} + t_r \\
-v_{min} t_r + \dfrac{v_{max} ^ 2}{2a_{min}} -\dfrac{v_{min}^2}{2a_2} & \dfrac{v_2}{a_2}  < \dfrac{v_1}{a_1} + t_r
+\dfrac{(a_{min}a_2t_r^2 + 2a_{min}t_rv_{min} + v_{max}^2 - 
+2v_{max}v_{min} + v_{min}^2)}{2(a_{min}-a_2)} & 
+\dfrac{v_{min}}{a_2}  \geq \dfrac{v_{max}}{a_{min}} + t_r \\
+v_{min} t_r + \dfrac{v_{max} ^ 2}{2a_{min}} - \dfrac{
+v_{min}^2}{2a_2} & \dfrac{v_{min}}{a_2}  < \dfrac{v_{max}}
+{a_{min}} + t_r
 \end{array}
 \right .
-\end{displaymath}\\
+\end{displaymath}
 
-\paragraph{$l${ } Distribution}
-From the result above, we can get $a_2(l)$
+The function $ L_{max}(a_2) $ is a piecewise function, and 
+its splitting point is 
+\begin{displaymath}
+K = \dfrac{v_{min}}{\dfrac{v_{max}}{a_{min}} + t_r}
+\end{displaymath}
+
+After substituting $ K $ to two function pieces, denoted by 
+$ L_{max_1} $ and $ L_{max_2} $ respectively, it is found 
+that 
+\begin{equation}\label{eq: Function L - Continuity}
+L_{max_1}(K) = L_{max_2}(K)
+\end{equation}
+which shows the \textbf{continuity} of the function 
+$ L_{max} $.
+
+And since 
+\begin{equation}
+\left \{
+\begin{array}{cl}
+L_{max_1}'(a_2) > 0 \\
+L_{max_2}'(a_2) > 0
+\end{array}
+\right .
+\end{equation}
+The \textbf{monotonicity} of $ L_{max} $ is proved.
 
 %\usepackage{amsmath}
 \[ a_2(l) = \begin{cases}
@@ -267,7 +312,9 @@ word, it is of little possibility that the distance is less
 than the l, that is, $\alpha(l) \rightarrow 0$                     
 
 
-\section{Traffic Flow Factor $\beta$}\label{sec: Traffic Flow Factor}
+\section{Traffic Flow Factor $ \beta $}
+\label{sec: Traffic Flow Factor}
+
 Since the layout of the cars on the freeway is complicated, 
 to simplify, we use a special model to discuss the 
 relationship between the safety and traffic flow under the 
@@ -344,7 +391,9 @@ What's more, it passes through the origin.
 %\end{itemize}
 
 
-\section{Convenience Factor}\label{sec: Convenience Factor}
+\section{Convenience Factor $ \gamma $}
+\label{sec: Convenience Factor}
+
 Without the right-most rule, a vehicle can drive on both lane for a long time. Under this condition, the events will be more common that one car blocks another car. This means that overtaking will be difficult,
 in other word, be less convenient. Therefore, the block can evaluate the performance of the traffic flow.
 %block: 两张车并行
