@@ -29,6 +29,9 @@
 # =========================
 *.log
 *.aux
+*.out
+mcmpaper.pdf
+mcmpaper.synctex.gz
 
 
 # =========================
