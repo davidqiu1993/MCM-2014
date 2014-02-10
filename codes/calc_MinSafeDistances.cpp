@@ -34,7 +34,7 @@ int main()
   
   for(int i=0; i<=800; ++i)
   {
-    calcMinSafeDistance(i*0.01, 5.14, 60/3.6, 120/3.6, 1.5);
+    calcMinSafeDistance(i*0.01, 5.14, 100/3.6, 120/3.6, 1.5);
   }
   
   system("pause");
