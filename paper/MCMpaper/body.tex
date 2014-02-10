@@ -39,7 +39,7 @@ criteria below:
 
 \paragraph{Safety} Distance and braking capability of adjacent 
 vehicles, and speed limits of the road, together affects the 
-safety. \textbf{Safety factor \alpha} is a value to measure 
+safety. \textbf{Safety factor $\alpha$} is a value to measure 
 how safe a vehicle is, and its value can be calculated from 
 a safety evaluation function discussed at the next section.
 
@@ -201,16 +201,13 @@ word, it is of little possibility that the distance is less
 than the l, that is, $\alpha(l) \rightarrow 0$                     
 
 
-\section{Traffic Flow Factor}
-Since the layout of the cars on the freeway is complicated, 
-to simplify, we use a special model to discuss the 
-relationship between the safety and traffic flow under the 
-situation with and without the right-most rule.
-\\
-\paragraph{Assumption}
+\section{Traffic Flow Factor $\beta $}
+\emph{Assumption}
 
-%\begin{itemize}
-%\item the rest flow on a single lane drive with a constant speed.
+\begin{itemize}
+\item $v$ and $\rho$ suits the Greenshield Model
+%\item 车道上车的密度较小的时候，车的行驶
+\end{itemize}
 
 \begin{table}
 \centering
@@ -218,16 +215,64 @@ situation with and without the right-most rule.
 \hline
 Parameter & Discription\\
 \hline
-$k$ & The traffic density\\
-$k_j$ & The traffic density under the traffic jam condition\\
-$k_m$ & The traffic density when the the traffic flow is the highest.\\
-$v_f$ & The velocity when the traffic density is small \\
+$\rho $ & The traffic density\\
+$\rho_j$ & The traffic density under the traffic jam condition\\
+$\rho_m$ & The traffic density when the the traffic flow is the highest.\\
+$v_f$ & The velocity of the vehicle when the traffic density is small \\
 $Q$ & Traffic flow \\
 %$N$ & The total number of the car on the freeway
 \hline
 \end{tabular}
 \caption{Model parameter}
 \end{table}
+
+\paragraph{The relationship between $v$ and $\rho$ }
+According to the Greenshield Model, the $v $and $\rho$ has such a 
+relationship:
+
+\begin{equation}
+v = a - b\rho
+\end{equation}
+$a$ and $b$ are coefficients
+
+\begin{itemize}
+\item let $\rho = 0$,$v = v_f$,
+we have $a = v_f$
+\\
+\item when the traffic density is highest, that is,
+$\rho = \rho j$, $v = 0$,
+we have $b = \frac{v_f}{k_j}$
+\end{itemize}
+
+Therefore, we have 
+\begin{equation}
+v = v_f(1 - \frac{\rho}{\rho_j})
+\end{equation}
+
+\begin{equation}
+\rho = \rho_j(1 - \frac{v}{v_f})
+\end {equation}
+
+\paragraph{The relationship between $Q$ and $\rho$ }
+\begin{equation}
+Q = \rho v = v_f(\rho - \frac{\rho^2}{\rho_j})
+\end{equation}
+This function has such properties:
+
+\begin{itemize}
+\item $Q$ is a quadratic function. 
+\item when $\frac{dQ}{d \rho} = 0$, 
+$\rho = \frac{1}{2}\rho_j = \rho_m $
+What's more, it passes through the origin.
+\end{itemize}
+%Since the layout of the cars on the freeway is complicated, 
+%to simplify, we use a special model to discuss the 
+%relationship between the safety and traffic flow under the 
+%situation with and without the right-most rule.
+%\paragraph{Assumption}
+
+%\begin{itemize}
+%\item the rest flow on a single lane drive with a constant speed.
 
 %\subsection{Con Model}
 %\paragraph{Assumption}
@@ -261,26 +306,21 @@ J^* = J_{supply} - J_{need}
 %\end{displaymath}
 %\end{itemize}
 
-\begin{table}
-\centering
-\begin{tabular}{ll}
-\hline
-Parameter & Meaning\\
-\hline
-$J$ & traffic flow\\
-$J_1$ & the supply traffic flow \\
-$J_2$ & the demand traffic flow \\
-$s$ & the lenth of a car \\
-$l$ & the safe distance \\
-$\bar{v}$ & the average velocity\\
-\hline
-\end{tabular}
-\caption{Model parameter}
-\end{table}
 
 
 \section{Convenience Factor}
-
+\emph{Assumption}
+\begin{itemize}
+\item We only consider the two-lane freeway's overtaking situation.
+\end{itemize}
+Without the right-most rule, a vehicle can drive on both lane for a long time, which indicates that the possibilities that one car block another car will increase.
+在没有了向右行驶的规则之后，一辆车可以长时间停在左边车道或是右边车道。遮挡的情况变得普遍出现于没有该规则的道路上。遮挡的时间越多，
+超车越困难，也就是说越不方便。XXXXX
+所以，遮挡可以作为衡量道路情况的一个指标
+\emph{Assumption}
+\begin{itemize}
+\item The traffic density is uniform distribution
+\end{itemize}
 
 % ==============================================================
 % Analysis
