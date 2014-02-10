@@ -171,12 +171,34 @@ We can see that , when $a_2$ = 0, that is, the front car has the lowest decelera
 Since the layout of the cars on the freeway is complicated, to simplify, we use a special model to discuss the relationship between the safety and traffic flow under the situation with and without the right-most rule.
 \\
 \paragraph{Assumption}
+
+\begin{itemize}
+%\item the rest flow on a single lane drive with a constant speed.
+
+\begin{table}
+\centering
+\begin{tabular}{ll}
+\hline
+Parameter & Discription\\
+\hline
+$k$ & The traffic density\\
+$k_j$ & The traffic density under the traffic jam condition\\
+$k_m$ & The traffic density when the the traffic flow is the highest.\\
+$v_f$ & The velocity when the traffic density is small \\
+$Q$ & Traffic flow \\
+%$N$ & The total number of the car on the freeway
+
+\hline
+\end{tabular}
+\caption{Model parameter}
+\end{table}
+
+\subsection{Con Model}
+\paragraph{Assumption}
 \begin{itemize}
 \item Only one car are overtaking, the others are driving with a constant speed
 \item Every overtaking, pass only one car
-\end{itemize
-\begin{itemize}
-\item the rest flow on a single lane
+\end{itemize}
 \begin{equation}
 J^* = J_{supply} - J_{need}
 \end{equation}
