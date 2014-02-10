@@ -1,6 +1,8 @@
 
-%======================问题介绍====================================
+%====================================问题介绍====================================
+
 \section{Introduction}
+
 In bidirectional traffic, right- and left-hand traffic requires 
 vehicles keep either to the right or the left side of the road, 
 respectively.\cite{Draper_Geoff_1993} The first right-hand 
@@ -33,15 +35,23 @@ models.
 
  Under the above and basic assumptions, we can set out
 to construct our model (show our approach in detail).
-%=============================问题分析==========================================
+
+
+%====================================问题分析====================================
+
 \section{Analysis of the Problem }
-We are going to evaluate the right-most rule' performance from two aspects: the safety and the traffic flow.
-\subsection{safety}
+
+Performance of a traffic rule is determined by the three 
+creteria below: 
+\subparagraph{Safety} xxxxx
+\subparagraph{Traffic Flow} xxxxxxxxx
+\subparagraph{Convenience} xxxxxxx
+
+\subsection{Safety}
 \emph{Assumptions}
-\begin{itemize}
-\item The value of acceleration subjects to normal distribution, $\mu = \frac{max(a)}{2}$,
+
+The value of acceleration subjects to normal distribution, $\mu = \frac{max(a)}{2}$,
 $\sigma = \frac{1}{4}\mu$, for $p(0 < a_2 < \frac{1}{4} \mu)$ and $p(\frac{7}{4} \mu < a_2 < 2\mu)$ is very small.
-\end{itemize}
 
 %==================================模型建立==============================================
 \paragraph{Safe Distance Model}
@@ -53,7 +63,7 @@ if the adjacent $d \leq l$ and the car in front suddenly slows down,the accident
 \centering
 \begin{tabular}{ll}
 \hline
-Parameter & Meaning\\
+Parameter & Description\\
 \hline
 $a_1$ & the acceleration of the  car in behind \\
 $v_1$ & the velocity of the  car in front \\
